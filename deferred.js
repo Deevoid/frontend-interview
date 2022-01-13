@@ -48,7 +48,9 @@ a.then((a) => {
   return "three";
 });
 
-a.resolve("Hello");
+setTimeout(() => {
+  a.resolve("Hello");
+}, 4000);
 
 //output
 // 1 Hello
