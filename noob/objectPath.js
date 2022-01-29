@@ -7,7 +7,6 @@ const obj = {
 };
 
 // [a]
-
 // a.b.c // 25
 // a.d.c // undefined
 // a.b.d // undefined

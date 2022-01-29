@@ -3,17 +3,15 @@ function debounce(func, wait, immediate = false) {
 
   return function () {
     clearTimeout(timeout);
-
-    const callNow = immediate && !timeout;
-
+    // const callNow = immediate && !timeout;
     timeout = setTimeout(() => {
-      timeout = null;
-      if (!immediate) {
-        func.apply(this, arguments);
-      }
+      // timeout = null;
+      func();
+      // if (!immediate) {
+      //   func.apply(this, arguments);
+      // }
     }, wait);
-
-    if (callNow) func.apply(this, arguments);
+    // if (callNow) func.apply(this, arguments);
   };
 }
 

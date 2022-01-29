@@ -8,7 +8,6 @@ var searchInsert = function (nums, target) {
   while (start <= end) {
     let mid = (start + end) >> 1;
     midValue = nums[mid];
-    console.log({ midValue, start, end, mid });
     if (midValue === target) return mid;
     if (midValue > target) end = mid - 1;
     if (midValue < target) start = mid + 1;
@@ -17,4 +16,4 @@ var searchInsert = function (nums, target) {
 };
 
 const arr = [1, 3, 5, 6];
-console.log(searchInsert(arr, 4));
+console.log(searchInsert(arr, 2));

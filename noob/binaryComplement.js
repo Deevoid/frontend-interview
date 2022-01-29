@@ -6,5 +6,4 @@ const binaryComplement = (num) => {
   }
   return parseInt(binary.join(""), 2);
 };
-
 console.log(binaryComplement(5));
