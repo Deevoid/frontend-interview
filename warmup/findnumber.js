@@ -7,8 +7,9 @@ function linearFind(arr, item) {
     if (arr[i] == item) {
       if (a === undefined) {
         a = i;
+      } else {
+        b = i;
       }
-      b = i;
     }
   }
   return [a, b];
@@ -17,7 +18,6 @@ function linearFind(arr, item) {
 function findBinary(arr, item) {
   function binarySearch(arr, start, end, target, directionLeft) {
     let result;
-
     while (start <= end) {
       let mid = (start + end) >> 1;
       if (arr[mid] === target) {

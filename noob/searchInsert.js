@@ -12,6 +12,8 @@ var searchInsert = function (nums, target) {
     if (midValue > target) end = mid - 1;
     if (midValue < target) start = mid + 1;
   }
+
+  // return start as it will indicate at which position the target could be inserted
   return start;
 };
 

@@ -20,14 +20,19 @@ console.log([...map.keys()]);
 // inplace for sorted array only
 function removeDuplicates(arr) {
   let j = 0;
-  for (let i = 0; i < arr.length - 1; i++) {
+  for (let i = 0; i < arr.length; i++) {
     // two pointer
     // j will point to sorted index only
     if (arr[i] != arr[i + 1]) {
-      arr[j++] = arr[i];
+      arr[j] = arr[i];
+      j++;
     }
   }
-  arr[j++] = arr[arr.length - 1];
+  j;
+
+  // set the last element
+  // arr[j++] = arr[arr.length - 1];
+
   console.log(arr);
 }
 var arr1 = [1, 2, 2, 3, 4, 4, 4, 5, 5];
