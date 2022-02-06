@@ -28,12 +28,29 @@ function removeDuplicates(arr) {
       j++;
     }
   }
-  j;
-
-  // set the last element
-  // arr[j++] = arr[arr.length - 1];
-
   console.log(arr);
 }
-var arr1 = [1, 2, 2, 3, 4, 4, 4, 5, 5];
+var arr1 = [1, 1, 2, 2, 3, 4, 4, 4, 5, 5];
 removeDuplicates(arr1);
+
+// maintain only two
+function removeDuplicatesTwice(arr) {
+  let j = 1;
+  let count = 1;
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] == arr[i - 1]) {
+      count++;
+      if (count < 3) {
+        arr[j] = arr[i];
+        j++;
+      }
+    } else {
+      arr[j] = arr[i];
+      count = 1;
+      j++;
+    }
+  }
+  console.log(arr);
+}
+var arr1 = [1, 1, 1, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5];
+removeDuplicatesTwice(arr1);
