@@ -1,6 +1,6 @@
 // find key in infinite sorted Array
 
-// find first occurence in infinite  sorted array
+//
 function infinity(arr, target) {
   let start = 0;
   let end = 1;
